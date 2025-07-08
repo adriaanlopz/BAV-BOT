@@ -16,7 +16,7 @@ async def on_ready():
 @bot.event
 async def on_voice_state_update(member, before, after):
     if before.channel is None and after.channel is not None:
-        canal = discord.utils.get(member.guild.text_channels, name="❰🌐❱▸general")
+        canal = discord.utils.get(member.guild.text_channels, name="❰🔔❱▸alertas")
         if canal:
             await canal.send(f"🔊 {member.display_name} se ha unido a {after.channel.name}")
 
