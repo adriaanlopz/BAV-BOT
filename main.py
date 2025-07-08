@@ -18,7 +18,7 @@ async def on_voice_state_update(member, before, after):
     if before.channel is None and after.channel is not None:
         canal = discord.utils.get(member.guild.text_channels, name="❰🔔❱▸alertas")
         if canal:
-            await canal.send(f"❗ {member.display_name} se ha unido al canal de voz {after.channel.name}")
+            await canal.send(f"❗ {member.display_name} se ha unido a {after.channel.name}")
 
 import os
 from keep_alive import keep_alive
