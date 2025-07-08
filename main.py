@@ -20,4 +20,5 @@ async def on_voice_state_update(member, before, after):
         if canal:
             await canal.send(f"🔊 {member.display_name} se ha unido a {after.channel.name}")
 
-bot.run("MTM5MTcyNTcwODQ4NDU0NjU3Mg.G31NBB.JfftGcHDO5KE69lR2lJhA0drj1ctA4lGH0lF6A")
+import os
+bot.run(os.getenv("DISCORD_BOT_TOKEN"))
